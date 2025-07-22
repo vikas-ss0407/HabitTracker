@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f5f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.note-container {
+  max-width: 700px;
+  width: 100%;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+.note-container h2 {
+  font-size: 26px;
+  margin-bottom: 25px;
+  font-weight: 600;
+  color: #333;
+}
+
+.note-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.note-textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  resize: vertical;
+  min-height: 150px;
+  transition: border-color 0.3s ease;
+}
+
+.note-textarea:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+.note-button {
+  padding: 12px 25px;
+  background-color: #ffc107;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.note-button:hover {
+  background-color: #e0a800;
+}

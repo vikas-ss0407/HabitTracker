@@ -1,0 +1,95 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center;
+  background-color: #f5f7fa;
+  padding-right: 10%;
+}
+
+.addhabit-container {
+  max-width: 600px;
+  width: 100%;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: slideUp 0.5s ease;
+  margin-right: 5%; 
+}
+
+.addhabit-container h2 {
+  color: #333;
+  font-size: 30px;
+  margin-bottom: 25px;
+  font-weight: 600;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+
+.habit-form {
+  max-width: 100%; 
+}
+
+.habit-form label {
+  display: block;
+  text-align: left;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #444;
+}
+
+.habit-form input,
+.habit-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: border 0.2s ease;
+}
+
+.habit-form input:focus,
+.habit-form textarea:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+.habit-form button {
+  width: 100%;
+  padding: 14px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.habit-form button:hover {
+  background-color: #43a047;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
