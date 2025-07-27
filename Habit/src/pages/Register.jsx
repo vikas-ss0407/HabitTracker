@@ -9,14 +9,13 @@ const Register = () => {
     email: '',
     password: ''
   });
+
   const navigate = useNavigate();
 
   useEffect(() => {
-    
     document.body.style.margin = '0';
     document.body.style.padding = '0';
     document.body.style.overflow = 'hidden';
-    
     return () => {
       document.body.style.margin = '';
       document.body.style.padding = '';
@@ -31,10 +30,12 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:8080/api/auth/register', formData);
+      const res = await axios.post('http://localhost:8080/api/auth/register', formData);
+      localStorage.setItem('token', res.data); // Save the JWT token
+      alert("Registration successful!");
       navigate('/login');
-    } catch (err) { 
-      alert(err.response?.data?.message || 'Registration failed'); 
+    } catch (err) {
+      alert(err.response?.data || 'Registration failed');
     }
   };
 
